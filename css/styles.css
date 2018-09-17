@@ -1,0 +1,148 @@
+body{
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0em;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+.showcase::after{
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background: url("/img/background.jpeg") no-repeat center;
+    background-size: cover;
+    position: relative;
+    display: block;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: all 1000ms;
+}
+.showcase:hover::after{
+
+    filter: blur(10px);
+    -webkit-filter: blur(10px);
+}
+
+.showcase .content{
+
+    filter: blur(2px);
+    -webkit-filter: blur(2px);
+}
+.showcase:hover .content{
+
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+}
+
+.content{
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 40%;
+    margin-top: 105px;
+    margin-left: -180px;
+    text-align: center;
+    transition: all 1000ms;
+}
+.content .logo{
+    height: 300px;
+    width: 300px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.content .Title{
+    margin-top: 1em;
+    font-size: 1.75em;
+
+}
+.content .text{
+    margin-top: 0.75em;
+    font-size: 1.25em;
+}
+
+.services{
+    background-color: white;
+    color: black;
+}
+.imgs {
+    margin-top: 1em;
+    width: 70px;
+    height: 70px;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container{
+    text-align: center;
+
+}
+.center{
+    text-align: center;
+}
+.about{
+    margin-top: 2em;
+    background-color: black;
+    color: white;
+}
+.about p{
+    margin-right: 5em;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+}
+.imgs2{
+    width: 150px;
+    height: 150px;
+}
+footer{
+    margin-top: 4em;
+}
+@media(max-width: 560px){
+    .showcase::after{
+        height: 80vh;
+        filter: blur(10px);
+        -webkit-filter: blur(10px);
+    }
+    .showcase .content{
+
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+    }
+
+    .content{
+        margin-left: -125px;
+        top: 5%;
+        margin-top: 80px;
+    }
+    .container .logo{
+        height: 70px;
+        width: 70px;
+    }
+    .content .text{
+        display: none;
+    }
+    .grid-3{
+        grid-template-columns: 1fr;
+    }
+    .services p{
+
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+
+    .grid-2{
+        grid-template-columns: 1fr;
+    }
+
+    .atext{
+        margin-top: 1em;
+        margin-left: 2em;
+    }
+
+}
